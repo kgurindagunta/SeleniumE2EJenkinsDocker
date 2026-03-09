@@ -27,7 +27,7 @@ public class ExtentReportsMethods {
 	
 	private static String  dynamicDate = setDate();
 	public static void setExtentReport() {
-		spark = new ExtentSparkReporter(System.getProperty("user.dir")+"/extent-output/"+dynamicDate+"index.html");
+		spark = new ExtentSparkReporter(System.getProperty("user.dir")+"/test-output/"+dynamicDate+"index.html");
 		spark.config().setDocumentTitle("PracticeTest E2E");
 		spark.config().setReportName("Selenium Framework E2E");
 		spark.config().setTheme(Theme.DARK);

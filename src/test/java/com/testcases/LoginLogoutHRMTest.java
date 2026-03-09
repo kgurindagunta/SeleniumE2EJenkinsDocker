@@ -8,13 +8,13 @@ import com.customAnnotation.FrameworkAnnotation;
 import com.enums.FrameworkData;
 import com.pages.HomePage;
 import com.pages.LoginPage;
-import com.utils.DataProvider;
+import com.utils.DataProviderUtil;
 import com.utils.PropertyFileUtil;
 
 public class LoginLogoutHRMTest extends BaseTest{
 
 	@FrameworkAnnotation(author = {"Kiran", "Gurindagunta"}, category = {"Sanity", "Regression"})
-	@Test(dataProvider = "exceldata", dataProviderClass = DataProvider.class)
+	@Test(dataProvider = "exceldata", dataProviderClass = DataProviderUtil.class)
 	public void newTest(Map<String,String> data) throws InterruptedException {
 
 
@@ -26,7 +26,7 @@ public class LoginLogoutHRMTest extends BaseTest{
 	}
 
 	@FrameworkAnnotation(author = {"Kiran", "Gurindagunta"}, category = {"Sanity", "Regression"})
-	@Test(dataProvider = "exceldata", dataProviderClass = DataProvider.class)
+	@Test(dataProvider = "exceldata", dataProviderClass = DataProviderUtil.class)
 	public void loginLogoutTest(Map<String,String> data) throws InterruptedException {
 
 

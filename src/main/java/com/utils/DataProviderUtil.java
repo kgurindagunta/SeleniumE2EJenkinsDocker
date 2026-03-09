@@ -1,16 +1,19 @@
 package com.utils;
 
 import java.io.IOException;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.testng.annotations.DataProvider;
+
 import com.constants.FrameworkConstants;
 
-public class DataProvider {
+public class DataProviderUtil {
 	
-	@org.testng.annotations.DataProvider(name = "exceldata")
+	@DataProvider(name = "exceldata")
 	public static Object[] readExcelWithDetails(Method m) throws IOException {
 		String methodname = m.getName();
 		List<Map<String,String>> excelList=ExcelUtil.readExcelData(FrameworkConstants.getDataProviderPath(), "Sheet1");
